@@ -4,6 +4,7 @@ using System.Text;
 
 namespace 透明组合模式
 {
+    //组合模式又称为部分—整体模式。组合模式将对象组合成树形结构，用来表示整体与部分的关系。组合模式使得客户端将单个对象和组合对象同等对待。如在.NET中WinForm中的控件，TextBox、Label等简单控件继承与Control类，同时GroupBox这样的组合控件也是继承于Control类。组合模式的具体结构图如下所示。
     // 通过一些简单图形以及一些复杂图形构建图形树来演示组合模式
     // 客户端调用
     class Client

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 访问者模式
 {
-
+    //访问者模式是封装一些施加于某种数据结构之上的操作。一旦这些操作需要修改的话，接受这个操作的数据结构则可以保存不变。访问者模式适用于数据结构相对稳定的系统， 它把数据结构和作用于数据结构之上的操作之间的耦合度降低，使得操作集合可以相对自由地改变。
     // 抽象元素角色
     public abstract class Element
     {
@@ -64,12 +64,7 @@ namespace 访问者模式
     // 对象结构
     public class ObjectStructure
     {
-        private ArrayList elements = new ArrayList();
-
-        public ArrayList Elements
-        {
-            get { return elements; }
-        }
+        public ArrayList Elements { get; } = new ArrayList();
 
         public ObjectStructure()
         {
@@ -79,11 +74,11 @@ namespace 访问者模式
                 int ranNum = ran.Next(10);
                 if (ranNum > 5)
                 {
-                    elements.Add(new ElementA());
+                    Elements.Add(new ElementA());
                 }
                 else
                 {
-                    elements.Add(new ElementB());
+                    Elements.Add(new ElementB());
                 }
             }
         }
